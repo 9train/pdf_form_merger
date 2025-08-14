@@ -16,8 +16,19 @@ from PyPDF2 import PdfReader, PdfWriter
 from PyPDF2.generic import NameObject, TextStringObject, DictionaryObject, BooleanObject
 
 def natural_key(s: str):
-    # Sort like a human: split digits and text so "...9" comes before "...10"
-    return [int(t) if t.isdigit() else t.lower() for t in re.findall(r'\d+|\D+', s)]
+    """
+    Return a key that compares safely by tagging each token with its type:
+    (0, int_value) for digits, (1, lower_string) for text.
+    This avoids int<->str comparisons during sorting.
+    """
+    parts = re.findall(r'\d+|\D+', s)
+    key = []
+    for t in parts:
+        if t.isdigit():
+            key.append((0, int(t)))
+        else:
+            key.append((1, t.lower()))
+    return tuple(key)
 
 def rename_fields_on_page(page, prefix: str) -> int:
     """Rename all /T names on a page's widget annotations using a prefix."""
