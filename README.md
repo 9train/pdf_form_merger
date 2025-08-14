@@ -100,6 +100,7 @@ output/
 -------------------Screenshots--------------------------
 
 📄 Example Script (rename_merge_pdfs.py):
+
 from pdfrw import PdfReader, PdfWriter, PdfName, PdfObject
 import os
 
