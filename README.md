@@ -36,9 +36,9 @@ Perfect for **student reports, multi-page forms, and datasets** that must keep *
    [Download here](https://www.python.org/downloads/).
 
 2. **Clone this repository**:
-   ```bash
-   git clone https://github.com/YOUR-USERNAME/pdf-field-renamer.git
+    git clone https://github.com/9train/pdf-field-renamer.git
    cd pdf-field-renamer
+   
 3. Install dependencies:
 pip install pdfrw
 
