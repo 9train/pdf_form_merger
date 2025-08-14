@@ -47,23 +47,28 @@ pip install pdfrw
 
 🛠 Usage
 📖 Beginner Setup Guide (Step-by-Step)
+
 This section is written so even if you’ve never coded before, you can run this script.
 
 1️⃣ Install Python
+
 Go to python.org/downloads and download Python 3.8 or higher.
 Windows: During installation, check the box "Add Python to PATH".
 Mac: Python usually comes pre-installed, but update it if it’s too old.
 
 2️⃣ Get the Script
+
 Click the green Code button on this repo’s GitHub page.
 Select Download ZIP.
 Extract the ZIP file to a folder on your computer.
 
 3️⃣ Put Your PDFs in the input Folder
+
 Inside the project folder, you will see a folder named input.
 Put all the PDFs you want to merge inside this folder.
 
 Example:
+
 input/
 ├── StudentName0.pdf
 ├── StudentName1.pdf
@@ -71,11 +76,13 @@ input/
 └── StudentName3.pdf
 
 4️⃣ Open a Terminal or Command Prompt
+
 Windows: Press Windows Key + R, type cmd, press Enter.
 Mac: Press Command + Space, type terminal, press Enter.
 VS Code: You can also open the folder in VS Code and press Ctrl + `` (backtick) to open the terminal.
 
 5️⃣ Navigate to Your Project Folder
+
 Type:
 cd path/to/your/folder
 
@@ -83,9 +90,11 @@ Example:
 cd Desktop/pdf-field-renamer
 
 6️⃣ Install the Required Library
+
 pip install pdfrw
 
 7️⃣ Run the Script
+
 Type:
 python rename_merge_pdfs.py
 
@@ -93,6 +102,7 @@ If your system uses python3 instead:
 python3 rename_merge_pdfs.py
 
 8️⃣ Get Your Result
+
 The script will create an output folder.
 Your merged PDF will be there:
 
