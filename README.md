@@ -78,15 +78,19 @@ input/
 4️⃣ Open a Terminal or Command Prompt
 
 Windows: Press Windows Key + R, type cmd, press Enter.
+
 Mac: Press Command + Space, type terminal, press Enter.
+
 VS Code: You can also open the folder in VS Code and press Ctrl + `` (backtick) to open the terminal.
 
 5️⃣ Navigate to Your Project Folder
 
 Type:
+
 cd path/to/your/folder
 
 Example:
+
 cd Desktop/pdf-field-renamer
 
 6️⃣ Install the Required Library
@@ -96,14 +100,17 @@ pip install pdfrw
 7️⃣ Run the Script
 
 Type:
+
 python rename_merge_pdfs.py
 
 If your system uses python3 instead:
+
 python3 rename_merge_pdfs.py
 
 8️⃣ Get Your Result
 
 The script will create an output folder.
+
 Your merged PDF will be there:
 
 output/
@@ -138,37 +145,52 @@ if __name__ == "__main__":
 ## 🛠 Troubleshooting
 
 ### 1️⃣ Error: `ModuleNotFoundError: No module named 'pdfrw'`
+
 **Cause:** The `pdfrw` library is not installed.  
 
 **Fix:**  
+
 Run this command in your terminal:
+
 pip install pdfrw
 
 If that doesn’t work, try:
+
 python3 -m pip install pdfrw
 
 2️⃣ Error: python: command not found
+
 Cause: Python is not installed or not added to your system’s PATH.
 
 Fix:
+
 Windows: Reinstall Python from python.org and check the box "Add Python to PATH" during setup.
+
 Mac: Install Python via:
 
 brew install python
+
 or download it from python.org.
 
 3️⃣ Error: Permission denied when running the script
+
 Cause: You are trying to write to a protected folder.
+
 Fix: Move your project to a folder you own, such as your Desktop or Documents.
 
 4️⃣ PDF Doesn’t Show Updated Fields After Merging
+
 Cause: Some PDF viewers (especially older ones) don’t refresh form appearances automatically.
 
 Fix:
+
 Open the merged PDF in Adobe Acrobat Reader or Chrome PDF Viewer.
 
 Make sure the script sets /NeedAppearances to true (already included in this script).
+
+
 📌 Notes
+
 - This script works best for PDFs with editable form fields.
 - If you merge without renaming field IDs, data will overwrite between pages.
 - You can adapt it for batch processing by looping over student folders.
